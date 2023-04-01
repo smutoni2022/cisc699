@@ -1,0 +1,15 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: hello-world-app
+  namespace: default
+spec:
+  destination:
+    namespace: default
+    server: https://kubernetes.default.svc
+  project: default
+  source:
+    repoURL: git@github.com:smutoni2022/cisc699.git
+    path: charts/hello-world
+    targetRevision: HEAD
+  syncPolicy: {}
