@@ -12,4 +12,7 @@ spec:
     repoURL: git@github.com:smutoni2022/cisc699.git
     path: charts/hello-world
     targetRevision: HEAD
-  syncPolicy: {}
+  syncPolicy: 
+    automated:
+      selfHeal: true
+      prune: true
